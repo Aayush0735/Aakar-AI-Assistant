@@ -1,0 +1,61 @@
+[Center Name] Academy — Faculty
+
+=== PHYSICS DEPARTMENT ===
+
+Dr. Rajesh Sharma (HOD - Physics)
+- Qualification: PhD in Physics from IIT Bombay
+- Experience: 15 years of teaching JEE/NEET Physics
+- Specialization: Mechanics, Electromagnetism, Modern Physics
+- Achievement: 200+ students selected in IIT under his guidance
+- Teaching Style: Concept-first approach with real-world analogies
+
+Prof. Anita Desai
+- Qualification: M.Sc. Physics from IIT Delhi, B.Ed.
+- Experience: 12 years
+- Specialization: Optics, Thermodynamics, Waves
+- Known for: Making complex topics simple through visual explanations
+
+=== CHEMISTRY DEPARTMENT ===
+
+Dr. Priya Mehta (HOD - Chemistry)
+- Qualification: PhD in Organic Chemistry from IISER Pune
+- Experience: 14 years of teaching JEE/NEET Chemistry
+- Specialization: Organic Chemistry, Coordination Chemistry
+- Achievement: Author of "Organic Chemistry Made Easy" reference book
+- Teaching Style: Mechanism-based approach to organic chemistry
+
+Prof. Vikram Singh
+- Qualification: M.Sc. Chemistry from IIT Kanpur
+- Experience: 10 years
+- Specialization: Physical Chemistry, Inorganic Chemistry
+- Known for: Mnemonic-based learning techniques for inorganic chemistry
+
+=== MATHEMATICS DEPARTMENT ===
+
+Prof. Suresh Kumar (HOD - Mathematics)
+- Qualification: M.Sc. Mathematics from IIT Madras
+- Experience: 18 years of teaching JEE Mathematics
+- Specialization: Calculus, Algebra, Coordinate Geometry
+- Achievement: National-level math olympiad mentor
+- Teaching Style: Problem-solving focused with emphasis on tricks and shortcuts
+
+Prof. Deepa Nair
+- Qualification: M.Sc. Mathematics from ISI Kolkata
+- Experience: 8 years
+- Specialization: Probability, Statistics, Trigonometry
+- Known for: Connecting mathematical concepts to competitive exam patterns
+
+=== BIOLOGY DEPARTMENT ===
+
+Dr. Kavita Joshi (HOD - Biology)
+- Qualification: MBBS from AIIMS Delhi, MD in Biochemistry
+- Experience: 12 years of teaching NEET Biology
+- Specialization: Human Physiology, Genetics, Ecology
+- Achievement: 150+ students selected in medical colleges under her mentorship
+- Teaching Style: Clinical case-based approach to biology
+
+Prof. Amit Patel
+- Qualification: M.Sc. Biotechnology from JNU
+- Experience: 9 years
+- Specialization: Botany, Cell Biology, Molecular Biology
+- Known for: Detailed diagram-based teaching for NEET preparation

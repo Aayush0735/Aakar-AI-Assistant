@@ -1,0 +1,76 @@
+{
+  "papers": [
+    {
+      "id": "jee-mains-physics-2024",
+      "exam": "JEE Mains",
+      "subject": "Physics",
+      "year": 2024,
+      "url": "https://storage.example.com/papers/jee-mains-physics-2024.pdf",
+      "keywords": ["jee", "mains", "physics", "2024"]
+    },
+    {
+      "id": "jee-mains-chemistry-2024",
+      "exam": "JEE Mains",
+      "subject": "Chemistry",
+      "year": 2024,
+      "url": "https://storage.example.com/papers/jee-mains-chemistry-2024.pdf",
+      "keywords": ["jee", "mains", "chemistry", "2024"]
+    },
+    {
+      "id": "jee-mains-maths-2024",
+      "exam": "JEE Mains",
+      "subject": "Mathematics",
+      "year": 2024,
+      "url": "https://storage.example.com/papers/jee-mains-maths-2024.pdf",
+      "keywords": ["jee", "mains", "mathematics", "maths", "math", "2024"]
+    },
+    {
+      "id": "jee-mains-physics-2023",
+      "exam": "JEE Mains",
+      "subject": "Physics",
+      "year": 2023,
+      "url": "https://storage.example.com/papers/jee-mains-physics-2023.pdf",
+      "keywords": ["jee", "mains", "physics", "2023"]
+    },
+    {
+      "id": "neet-biology-2024",
+      "exam": "NEET",
+      "subject": "Biology",
+      "year": 2024,
+      "url": "https://storage.example.com/papers/neet-biology-2024.pdf",
+      "keywords": ["neet", "biology", "bio", "2024"]
+    },
+    {
+      "id": "neet-physics-2024",
+      "exam": "NEET",
+      "subject": "Physics",
+      "year": 2024,
+      "url": "https://storage.example.com/papers/neet-physics-2024.pdf",
+      "keywords": ["neet", "physics", "2024"]
+    },
+    {
+      "id": "neet-biology-2023",
+      "exam": "NEET",
+      "subject": "Biology",
+      "year": 2023,
+      "url": "https://storage.example.com/papers/neet-biology-2023.pdf",
+      "keywords": ["neet", "biology", "bio", "2023"]
+    },
+    {
+      "id": "cet-pcm-2024",
+      "exam": "MHT-CET",
+      "subject": "PCM",
+      "year": 2024,
+      "url": "https://storage.example.com/papers/cet-pcm-2024.pdf",
+      "keywords": ["cet", "mht", "pcm", "physics", "chemistry", "mathematics", "2024"]
+    },
+    {
+      "id": "cet-pcb-2024",
+      "exam": "MHT-CET",
+      "subject": "PCB",
+      "year": 2024,
+      "url": "https://storage.example.com/papers/cet-pcb-2024.pdf",
+      "keywords": ["cet", "mht", "pcb", "physics", "chemistry", "biology", "2024"]
+    }
+  ]
+}
