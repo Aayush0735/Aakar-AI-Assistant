@@ -22,6 +22,16 @@ import {
   formatPaperResponse,
 } from "@/lib/paper-search";
 
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type, Authorization",
+};
+
+export async function OPTIONS() {
+  return NextResponse.json({}, { headers: corsHeaders });
+}
+
 /**
  * Extract client IP from request headers
  */
@@ -174,14 +184,14 @@ export async function POST(request: NextRequest) {
     if (!message || typeof message !== "string") {
       return NextResponse.json(
         { error: "Message is required and must be a string" },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
     if (message.length > 1000) {
       return NextResponse.json(
         { error: "Message must be under 1000 characters" },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -197,7 +207,7 @@ export async function POST(request: NextRequest) {
           rateLimited: true,
           remaining: 0,
         },
-        { status: 429 }
+        { status: 429, headers: corsHeaders }
       );
     }
 
@@ -205,21 +215,27 @@ export async function POST(request: NextRequest) {
     if (isPaperRequest(message)) {
       const papers = searchPapers(message);
       const response = formatPaperResponse(papers);
-      return NextResponse.json({
-        response,
-        type: "paper",
-        remaining,
-      });
+      return NextResponse.json(
+        {
+          response,
+          type: "paper",
+          remaining,
+        },
+        { headers: corsHeaders }
+      );
     }
 
     // Step 3: Check for local keyword matches
     const localMatch = getLocalMatch(message);
     if (localMatch) {
-      return NextResponse.json({
-        response: localMatch,
-        type: "ai",
-        remaining,
-      });
+      return NextResponse.json(
+        {
+          response: localMatch,
+          type: "ai",
+          remaining,
+        },
+        { headers: corsHeaders }
+      );
     }
 
     // Step 4: RAG — Retrieve relevant context
@@ -252,11 +268,14 @@ export async function POST(request: NextRequest) {
     // Step 5: Generate response with Gemini
     const response = await generateChatResponse(message, context);
 
-    return NextResponse.json({
-      response,
-      type: "ai",
-      remaining,
-    });
+    return NextResponse.json(
+      {
+        response,
+        type: "ai",
+        remaining,
+      },
+      { headers: corsHeaders }
+    );
   } catch (error) {
     console.error("[Chat API] Error:", error);
 
@@ -270,7 +289,7 @@ export async function POST(request: NextRequest) {
           : "I'm sorry, I couldn't find an exact match for that in my local data, and the AI service is currently unavailable. Please call our front desk at +91 7499571615 for immediate help.",
         type: "error",
       },
-      { status: 500 }
+      { status: 500, headers: corsHeaders }
     );
   }
 }
