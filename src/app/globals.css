@@ -1,26 +1,251 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ============================================
+   AI Chat Agent — Design System
+   Premium dark theme with glassmorphism
+   ============================================ */
 
+/* --- Tailwind Theme Extensions --- */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* --- CSS Custom Properties --- */
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-highlight: rgba(0, 0, 0, 0.04);
+  --gradient-primary: linear-gradient(135deg, #2563eb 0%, #059669 100%);
+  --gradient-user-bubble: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+  --shadow-glow: 0 0 40px rgba(37, 99, 235, 0.1);
+}
+
+/* --- Base Styles --- */
+* {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Glassmorphism Chat Panel --- */
+.chat-panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    var(--shadow-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.chat-header {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+}
+
+/* --- Message Bubbles --- */
+.chat-bubble-user {
+  background: var(--gradient-user-bubble);
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.chat-bubble-bot {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+.chat-input-container {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+/* --- Scrollbar --- */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(37, 99, 235, 0.2) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(37, 99, 235, 0.2);
+  border-radius: 9999px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 99, 235, 0.4);
+}
+
+/* --- FAB Pulse Animation --- */
+.fab-pulse {
+  /* Removed position: relative; because it overrides the Tailwind 'fixed' class */
+}
+
+.fab-pulse::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  animation: fab-ring-pulse 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes fab-ring-pulse {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.15);
+  }
+}
+
+/* --- Quick Action Chip Animation --- */
+.quick-action-chip {
+  opacity: 0;
+  animation: chip-fade-in 0.4s ease-out forwards;
+}
+
+@keyframes chip-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Typing Indicator Dots --- */
+@keyframes typing-bounce {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+.animate-typing-dot {
+  animation: typing-bounce 1.4s ease-in-out infinite;
+}
+
+/* --- Message Slide Animations --- */
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.3s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+/* --- General Fade In --- */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+/* --- Landing Page Styles --- */
+.hero-gradient {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(168, 85, 247, 0.06) 0%, transparent 50%);
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* --- Floating Orbs (Background Decoration) --- */
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(20px, -30px) rotate(5deg);
+  }
+  50% {
+    transform: translate(-10px, -50px) rotate(-3deg);
+  }
+  75% {
+    transform: translate(-20px, -20px) rotate(2deg);
+  }
+}
+
+.animate-float {
+  animation: float 20s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 440px) {
+  .chat-panel {
+    left: 8px;
+    right: 8px;
+    bottom: 80px;
+    width: auto !important;
+  }
 }

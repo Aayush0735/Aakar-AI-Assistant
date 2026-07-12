@@ -24,7 +24,7 @@ export const quickActions: QuickAction[] = [
     id: "batch-timings",
     label: "New Batch Timings",
     icon: "🕐",
-    response: `Here are our upcoming batch timings:\n\n🎯 **JEE 2026 Batches**\n• Morning Batch: 7:00 AM – 10:00 AM (Mon–Sat)\n• Evening Batch: 5:00 PM – 8:00 PM (Mon–Sat)\n• Weekend Batch: 9:00 AM – 1:00 PM (Sat & Sun)\n\n🎯 **NEET 2026 Batches**\n• Morning Batch: 7:30 AM – 10:30 AM (Mon–Sat)\n• Afternoon Batch: 1:00 PM – 4:00 PM (Mon–Sat)\n• Weekend Batch: 2:00 PM – 6:00 PM (Sat & Sun)\n\n🎯 **Foundation Batches (Class 8–10)**\n• After-School Batch: 4:00 PM – 6:00 PM (Mon–Fri)\n• Weekend Batch: 10:00 AM – 1:00 PM (Sat & Sun)\n\n📞 Call us at **+91 98765 43210** for more details or to reserve your seat!`,
+    response: `Here are our upcoming batch details:\n\n🎯 **Class 9th & 10th CBSE with NEET/JEE Foundation**\n• Start Date: April 2026 (24 months)\n\n🎯 **FOCUS / INSPIRE NEET 2028**\n• Start Date: June 2026 (24 months)\n• Integrated & Non-Integrated options available\n\n🎯 **FOCUS / INSPIRE JEE 2028**\n• Start Date: June 2026 (24 months)\n• Integrated & Non-Integrated options available\n\n🎯 **MHT-CET 2028**\n• Start Date: June 2026 (24 months)\n\n🎯 **Resilience NEET 2027 Repeater Batch**\n• Start Date: June 2026 (12 months)\n\n📞 Call us at **+91 7499571615** for more details or to reserve your seat!`,
   },
   {
     id: "fee-structure",
@@ -36,6 +36,6 @@ export const quickActions: QuickAction[] = [
     id: "contact",
     label: "Address & Contact",
     icon: "📍",
-    response: `Here's how to reach us:\n\n📍 **Address**\n[Center Name] Academy\n2nd Floor, Knowledge Tower,\nStation Road, Near City Mall,\nMumbai – 400001, Maharashtra\n\n📞 **Phone**: +91 98765 43210\n📧 **Email**: info@centername.com\n🌐 **Website**: www.centername.com\n\n⏰ **Office Hours**\n• Monday – Saturday: 8:00 AM – 8:00 PM\n• Sunday: 9:00 AM – 2:00 PM\n\n🗺️ **Landmarks**: Opposite Central Railway Station, above State Bank of India\n\nWe'd love to see you! Walk-ins are welcome during office hours.`,
+    response: `Here's how to reach us:\n\n📍 **Head Office (Chinchani)**\nAakars Eduvision Pvt. Ltd.\nHouse No 4409, Chinchani Village, \nTarapur Textile Park, Palghar Dahanu - 401501\n📞 +91 7499571615\n\n📍 **Boisar Branch**\nShop No. 221, 2nd floor, Yash Padma Arcade,\nBoisar - Tarapur Rd, Near Boisar Station.\n📞 +91 7499392026 / +91 8983128905\n\n📧 **Email**: info@aakars.in\n🌐 **Website**: www.aakars.in\n\nWe'd love to see you! Walk-ins are welcome.`,
   },
 ];

@@ -1,70 +1,52 @@
-[Center Name] Academy — Batch Schedule 2025–2026
+Aakar's Eduvision - Courses & Batch Programs
 
-=== JEE PREPARATION ===
+We offer 7 primary programs tailored for NEET, JEE, MHT-CET, and foundational learning.
 
-JEE 2026 Comprehensive (2-Year Program for Class 11 students):
-- Morning Batch: 7:00 AM – 10:00 AM, Monday to Saturday
-- Evening Batch: 5:00 PM – 8:00 PM, Monday to Saturday
-- Weekend Batch: 9:00 AM – 1:00 PM, Saturday and Sunday
-- Subjects Covered: Physics, Chemistry, Mathematics
-- Batch Start Dates: July 1, August 1, September 1 (Rolling admissions)
-- Batch Size: Maximum 30 students
+1. Class 9th & 10th CBSE with NEET/JEE Foundation Course:
+   - Start Date: April 2026
+   - Duration: 24 months
+   - Mode: Offline (Regular)
+   - Subjects: Science, Math & English
+   - Highlights: Focuses on Bloom's Taxonomy, daily 4-hour lectures (includes CDS revision, doubt solving & PYQs).
 
-JEE 2026 One-Year Program (For Class 12 / Droppers):
-- Intensive Batch: 8:00 AM – 12:00 PM, Monday to Saturday
-- Evening Batch: 4:00 PM – 8:00 PM, Monday to Saturday
-- Subjects Covered: Physics, Chemistry, Mathematics (complete syllabus revision + advanced problems)
-- Batch Start Date: April 1, 2025
+2. FOCUS NEET 2028 Integrated Medical Entrance Program:
+   - Start Date: June 2026
+   - Duration: 24 months
+   - Mode: Offline (Integrated college model)
+   - Subjects: Physics, Chemistry, Biology
+   - Highlights: Kota-pattern instruction. Daily 4-hour lectures + 2-hour CDS (Comprehensive Daily Schedule). 30+ Weekly tests, 40+ mocks.
 
-JEE Crash Course (3 Months):
-- Morning Batch: 7:00 AM – 11:00 AM, Monday to Saturday
-- Subjects: Quick revision of all topics + mock test series
-- Start Dates: October 1, November 1, December 1
+3. INSPIRE NEET 2028 Smart & Flexible NEET Preparation Program:
+   - Start Date: June 2026
+   - Duration: 24 months
+   - Mode: Offline (Integrated/Non Integrated flexible options)
+   - Subjects: Physics, Chemistry, Biology
+   - Highlights: Kota-pattern instruction. Does NOT include CDS (great for self-study students). 30+ Weekly tests, 40+ mocks.
 
-=== NEET PREPARATION ===
+4. FOCUS JEE 2028 A Smart & Balanced Path to IITs and Beyond:
+   - Start Date: June 2026
+   - Duration: 24 months
+   - Mode: Offline (Integrated college model)
+   - Subjects: Physics, Chemistry, Mathematics
+   - Highlights: Kota-pattern instruction. Daily 4-hour lectures + 2-hour CDS. 30+ Weekly tests, 40+ mocks.
 
-NEET 2026 Comprehensive (2-Year Program for Class 11 students):
-- Morning Batch: 7:30 AM – 10:30 AM, Monday to Saturday
-- Afternoon Batch: 1:00 PM – 4:00 PM, Monday to Saturday
-- Weekend Batch: 2:00 PM – 6:00 PM, Saturday and Sunday
-- Subjects Covered: Physics, Chemistry, Biology (Botany + Zoology)
-- Batch Start Dates: July 1, August 1, September 1
-- Batch Size: Maximum 30 students
+5. INSPIRE JEE 2028 Structured JEE Preparation with Academic Balance:
+   - Start Date: June 2026
+   - Duration: 24 months
+   - Mode: Offline (Integrated/Non Integrated flexible options)
+   - Subjects: Physics, Chemistry, Mathematics
+   - Highlights: Kota-pattern instruction. Does NOT include CDS. 30+ Weekly tests, 40+ mocks.
 
-NEET 2026 One-Year Program (For Class 12 / Droppers):
-- Intensive Batch: 8:00 AM – 12:00 PM, Monday to Saturday
-- Subjects: Complete NCERT-based revision + NEET-level problem solving
-- Batch Start Date: April 1, 2025
+6. MHT-CET 2028 Smart Preparation, Without Extra Pressure:
+   - Start Date: June 2026
+   - Duration: 24 months
+   - Mode: Offline (Integrated/Non Integrated flexible options)
+   - Subjects: Physics, Chemistry, Math/Biology (depending on stream)
+   - Highlights: CET pattern focus. Option 1 (Integrated with CDS: 4h lectures, 2h CDS), Option 2 (Regular: lectures only). Monthly group tests.
 
-NEET Crash Course (3 Months):
-- Afternoon Batch: 1:00 PM – 5:00 PM, Monday to Saturday
-- Focus: High-yield topics, previous year analysis, mock tests
-- Start Dates: January 1, February 1
-
-=== MHT-CET PREPARATION ===
-
-MHT-CET Batch:
-- Evening Batch: 5:30 PM – 7:30 PM, Monday to Friday
-- Weekend Batch: 3:00 PM – 6:00 PM, Saturday
-- Integrated with JEE/NEET batches — students preparing for JEE or NEET get CET preparation included
-
-=== FOUNDATION PROGRAM ===
-
-Foundation Batch (Class 8, 9, 10):
-- After-School Batch: 4:00 PM – 6:00 PM, Monday to Friday
-- Weekend Batch: 10:00 AM – 1:00 PM, Saturday and Sunday
-- Subjects: Science (Physics, Chemistry, Biology) + Mathematics
-- Builds strong foundation for competitive exams while complementing school syllabus
-
-=== SPECIAL BATCHES ===
-
-Doubt Clearing Sessions:
-- Available daily from 6:00 PM – 8:00 PM for all enrolled students
-- No additional charge
-
-Test Series Only:
-- For students who want mock tests without regular coaching
-- Weekly tests on Sundays, 10:00 AM – 1:00 PM
-- Includes detailed performance analysis and rank prediction
-
-If you missed the mechanics module in 11th standard, you should join the JEE 2026 One-Year Program which covers the complete syllabus from scratch including mechanics. Alternatively, you can join the crash course batch which does a quick revision of all topics.
+7. Resilience NEET 2027 Repeater Batch:
+   - Start Date: June 2026
+   - Duration: 12 months
+   - Mode: Offline (Regular)
+   - Subjects: Physics, Chemistry, Biology
+   - Highlights: Synoptic complete syllabus revision, weekly study plans, unit-wise/minor/major tests, 40+ full mock tests, AITS (All India Test Series).

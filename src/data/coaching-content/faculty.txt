@@ -1,61 +1,55 @@
-[Center Name] Academy — Faculty
+Aakar's Eduvision - Leadership and Faculty Team
 
-=== PHYSICS DEPARTMENT ===
+Directors:
+- Prof. Amit Karvir (Founder & Director)
+- Prof. Amey Samarth (Director)
 
-Dr. Rajesh Sharma (HOD - Physics)
-- Qualification: PhD in Physics from IIT Bombay
-- Experience: 15 years of teaching JEE/NEET Physics
-- Specialization: Mechanics, Electromagnetism, Modern Physics
-- Achievement: 200+ students selected in IIT under his guidance
-- Teaching Style: Concept-first approach with real-world analogies
+Heads & Key Leadership:
+- Prof. Amod Chaubal (I/C Principal, HOD Chemistry)
+- Shubham Gupta (HOD Physics)
+- Ms. Roshni Mishra (Course Coordinator, Biology Faculty)
+- Punam Ramteke (Head of College Examinations, Biology Faculty)
+- Vaishali Rajput (Deputy HoD Biology)
+- Ms. Suchita Tamore (Examination Head, Chemistry Teacher)
+- Ms. Prajakta Patil (Head Of Competence Development, Chemistry Faculty)
+- Gajsukh Jain (Co-Ordinator Chemistry Faculty)
+- Harshal Tamore (Physics faculty & Co-Ordinator)
+- Aparna Ashar (HoD Sales/Marketing)
+- Tanaya Sachdev (Branding & Marketing)
 
-Prof. Anita Desai
-- Qualification: M.Sc. Physics from IIT Delhi, B.Ed.
-- Experience: 12 years
-- Specialization: Optics, Thermodynamics, Waves
-- Known for: Making complex topics simple through visual explanations
+Subject Faculty:
+Biology:
+- Ms. Roshni Mishra
+- Punam Ramteke
+- Vaishali Rajput
+- Hindavi Patil
 
-=== CHEMISTRY DEPARTMENT ===
+Chemistry:
+- Prof. Amod Chaubal
+- Ms. Suchita Tamore
+- Ms. Prajakta Patil
+- Gajsukh Jain
+- Prathmesh Malekar
+- Vaibhav Sahamate
 
-Dr. Priya Mehta (HOD - Chemistry)
-- Qualification: PhD in Organic Chemistry from IISER Pune
-- Experience: 14 years of teaching JEE/NEET Chemistry
-- Specialization: Organic Chemistry, Coordination Chemistry
-- Achievement: Author of "Organic Chemistry Made Easy" reference book
-- Teaching Style: Mechanism-based approach to organic chemistry
+Physics:
+- Shubham Gupta
+- Harshal Tamore
+- Nitin Desai
+- Kajal Yadav
+- Kajal Pimple
 
-Prof. Vikram Singh
-- Qualification: M.Sc. Chemistry from IIT Kanpur
-- Experience: 10 years
-- Specialization: Physical Chemistry, Inorganic Chemistry
-- Known for: Mnemonic-based learning techniques for inorganic chemistry
+Mathematics:
+- Ms. Srushti Save
+- Pooja Mali
+- Vikas Singh
+- Riddhi Lade
+- Deval Pagdhare
 
-=== MATHEMATICS DEPARTMENT ===
-
-Prof. Suresh Kumar (HOD - Mathematics)
-- Qualification: M.Sc. Mathematics from IIT Madras
-- Experience: 18 years of teaching JEE Mathematics
-- Specialization: Calculus, Algebra, Coordinate Geometry
-- Achievement: National-level math olympiad mentor
-- Teaching Style: Problem-solving focused with emphasis on tricks and shortcuts
-
-Prof. Deepa Nair
-- Qualification: M.Sc. Mathematics from ISI Kolkata
-- Experience: 8 years
-- Specialization: Probability, Statistics, Trigonometry
-- Known for: Connecting mathematical concepts to competitive exam patterns
-
-=== BIOLOGY DEPARTMENT ===
-
-Dr. Kavita Joshi (HOD - Biology)
-- Qualification: MBBS from AIIMS Delhi, MD in Biochemistry
-- Experience: 12 years of teaching NEET Biology
-- Specialization: Human Physiology, Genetics, Ecology
-- Achievement: 150+ students selected in medical colleges under her mentorship
-- Teaching Style: Clinical case-based approach to biology
-
-Prof. Amit Patel
-- Qualification: M.Sc. Biotechnology from JNU
-- Experience: 9 years
-- Specialization: Botany, Cell Biology, Molecular Biology
-- Known for: Detailed diagram-based teaching for NEET preparation
+Admin Team:
+- Pooja Chakravarty
+- Yadnesh Parekh
+- Dhruvika Patil
+- Nitesh Babar
+- Rakshita Dalvi
+- Deepa Vishwakarma
