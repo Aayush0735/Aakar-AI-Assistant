@@ -18,7 +18,7 @@ export default defineConfig({
   define: {
     // Inject the Next.js API URL environment variable during build
     "process.env.NEXT_PUBLIC_API_URL": JSON.stringify(process.env.NEXT_PUBLIC_API_URL || ""),
-    "process.env": {},
+    "process.env.NODE_ENV": JSON.stringify("production"),
   },
   build: {
     outDir: "public",

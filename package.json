@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run build:widget && next build",
     "build:widget": "vite build -c vite.widget.config.mts",
     "start": "next start",
     "lint": "eslint"
