@@ -91,13 +91,22 @@ export default function ChatInput({
                 : "Ask about courses, batches, fees..."
             }
             rows={1}
-            className="w-full block resize-none rounded-xl px-4 py-2.5 text-sm
+            className="w-full block resize-none rounded-xl text-sm
               bg-white border border-slate-200
               text-slate-800 placeholder-slate-400 shadow-sm
               focus:outline-none focus:border-blue-500/40 focus:ring-1 focus:ring-blue-500/20
               disabled:opacity-40 disabled:cursor-not-allowed
               transition-all duration-200"
-            style={{ maxHeight: "120px", color: '#1e293b', backgroundColor: '#ffffff', borderColor: '#e2e8f0' }}
+            style={{ 
+              maxHeight: "120px", 
+              minHeight: "44px",
+              padding: "10px 16px",
+              boxSizing: "border-box",
+              lineHeight: "1.5",
+              color: '#1e293b', 
+              backgroundColor: '#ffffff', 
+              borderColor: '#e2e8f0' 
+            }}
           />
 
           {/* Character count */}

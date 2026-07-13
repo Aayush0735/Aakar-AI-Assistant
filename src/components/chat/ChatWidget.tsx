@@ -323,8 +323,7 @@ export default function ChatWidget() {
 
           {/* Quick Action Chips always available at bottom */}
           {messages.length > 0 && (
-            <div className="pt-2 border-t border-slate-100">
-              <p className="text-[10px] text-slate-400 mb-2 px-1">Quick Links:</p>
+            <div className="pt-2 border-t border-slate-100 mt-2">
               <QuickActionChips onSelect={handleQuickAction} disabled={isLoading} />
             </div>
           )}
