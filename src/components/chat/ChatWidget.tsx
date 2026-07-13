@@ -165,7 +165,7 @@ export default function ChatWidget() {
   );
 
   /**
-   * Handle quick action chip click — instant response, no API call
+   * Handle quick action chip click — simulated delay for natural feel
    */
   const handleQuickAction = useCallback(
     (action: QuickAction) => {
@@ -177,10 +177,12 @@ export default function ChatWidget() {
         type: "quick-action",
       };
       appendMessage(userMsg);
+      setIsLoading(true);
 
       setTimeout(() => {
         addBotMessage(action.response, "quick-action");
-      }, 300);
+        setIsLoading(false);
+      }, 3000);
     },
     [appendMessage, addBotMessage]
   );
@@ -208,6 +210,9 @@ export default function ChatWidget() {
         });
 
         const data = await res.json();
+        
+        // Artificial delay of 3 seconds to simulate human typing
+        await new Promise(resolve => setTimeout(resolve, 3000));
 
         if (res.status === 429) {
           addBotMessage(data.response, "error");
@@ -270,7 +275,10 @@ export default function ChatWidget() {
 
               {/* Home Body */}
               <div className="px-5 pb-6" style={{ padding: '0 20px 24px' }}>
-                <h1 className="text-3xl font-bold text-slate-800 leading-[1.2] mt-2 mb-8">
+                <h1 
+                  className="text-3xl font-bold text-slate-800 leading-[1.2] mt-2 mb-8"
+                  style={{ fontWeight: 700, marginBottom: '2rem' }}
+                >
                   Hi there 👋<br />
                   How can we help?
                 </h1>
