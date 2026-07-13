@@ -246,7 +246,11 @@ export default function ChatWidget() {
               {/* Chat Header */}
               <div className="bg-white flex items-center justify-between px-4 py-3 border-b border-slate-100 shrink-0">
               <div className="flex items-center gap-3">
-                <button onClick={() => setActiveTab('home')} className="text-slate-400 hover:text-slate-600 p-1 -ml-1 rounded hover:bg-slate-50">
+                <button
+                  onClick={() => setActiveTab('home')}
+                  className="mr-2 text-slate-400 hover:text-slate-600 transition-colors"
+                  style={{ color: '#94a3b8' }}
+                >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
                   </svg>

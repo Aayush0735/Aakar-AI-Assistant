@@ -97,7 +97,7 @@ export default function ChatInput({
               focus:outline-none focus:border-blue-500/40 focus:ring-1 focus:ring-blue-500/20
               disabled:opacity-40 disabled:cursor-not-allowed
               transition-all duration-200"
-            style={{ maxHeight: "120px" }}
+            style={{ maxHeight: "120px", color: '#1e293b', backgroundColor: '#ffffff', borderColor: '#e2e8f0' }}
           />
 
           {/* Character count */}
@@ -124,8 +124,13 @@ export default function ChatInput({
             shadow-lg shadow-blue-500/20
             hover:shadow-blue-500/30 hover:scale-105
             active:scale-95
-            disabled:opacity-30 disabled:shadow-none disabled:hover:scale-100
+            disabled:shadow-none disabled:hover:scale-100
             transition-all duration-200"
+          style={{ 
+            background: 'linear-gradient(135deg, #2563eb 0%, #10b981 100%)', 
+            color: '#ffffff',
+            opacity: disabled || !value.trim() ? 0.3 : 1 
+          }}
           aria-label="Send message"
         >
           <svg

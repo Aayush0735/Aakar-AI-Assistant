@@ -39,6 +39,8 @@ export default function QuickActionChips({
               disabled:opacity-50 disabled:pointer-events-none"
             style={{
               animationDelay: `${index * 100 + 200}ms`,
+              border: '1px solid #e2e8f0',
+              color: '#475569'
             }}
           >
             <span className="text-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
