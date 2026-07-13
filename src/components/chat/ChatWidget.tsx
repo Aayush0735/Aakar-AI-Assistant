@@ -269,7 +269,7 @@ export default function ChatWidget() {
               </div>
 
               {/* Home Body */}
-              <div className="px-5 pb-6">
+              <div className="px-5 pb-6" style={{ padding: '0 20px 24px' }}>
                 <h1 className="text-3xl font-bold text-slate-800 leading-[1.2] mt-2 mb-8">
                   Hi there 👋<br />
                   How can we help?
@@ -338,7 +338,10 @@ export default function ChatWidget() {
                       <img src="https://aakar-ai-assistant.vercel.app/logo.png" alt="Logo" className="w-full h-full object-contain scale-95" />
                     </div>
                     <div className="flex flex-col">
-                      <h3 className="text-[15px] font-semibold text-slate-800 leading-tight">
+                      <h3 
+                        className="text-[15px] font-semibold text-slate-800 leading-tight"
+                        style={{ fontWeight: 600, color: '#1e293b' }}
+                      >
                         Aakar's Assistant
                       </h3>
                       <p className="text-[11px] font-medium text-[#00c288] flex items-center gap-1.5 mt-0.5">
@@ -359,7 +362,14 @@ export default function ChatWidget() {
                   {showMenu && (
                     <>
                       <div className="fixed inset-0 z-40" onClick={() => setShowMenu(false)} />
-                      <div className="absolute right-8 top-10 w-40 bg-white rounded-lg shadow-lg border border-slate-100 z-50 overflow-hidden">
+                      <div 
+                        className="absolute right-8 top-10 w-40 bg-white rounded-lg shadow-lg border border-slate-100 z-50 overflow-hidden"
+                        style={{
+                          backgroundColor: '#ffffff',
+                          border: '1px solid #f1f5f9',
+                          boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)'
+                        }}
+                      >
                         <button 
                           onClick={startNewChat}
                           className="w-full text-left px-4 py-2.5 text-[13px] font-medium text-slate-700 hover:bg-slate-50 transition-colors flex items-center gap-2"
@@ -396,7 +406,7 @@ export default function ChatWidget() {
               <div
                 ref={chatBodyRef}
                 className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin"
-                style={{ minHeight: "300px" }}
+                style={{ minHeight: "300px", padding: '16px' }}
               >
                 {/* Welcome message */}
                 {messages.length === 0 && (
