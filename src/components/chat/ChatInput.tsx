@@ -91,7 +91,7 @@ export default function ChatInput({
                 : "Ask about courses, batches, fees..."
             }
             rows={1}
-            className="w-full resize-none rounded-xl px-4 py-2.5 text-sm
+            className="w-full block resize-none rounded-xl px-4 py-2.5 text-sm
               bg-white border border-slate-200
               text-slate-800 placeholder-slate-400 shadow-sm
               focus:outline-none focus:border-blue-500/40 focus:ring-1 focus:ring-blue-500/20
