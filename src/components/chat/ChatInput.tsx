@@ -105,7 +105,7 @@ export default function ChatInput({
               lineHeight: "1.5",
               color: '#1e293b', 
               backgroundColor: '#ffffff', 
-              borderColor: '#e2e8f0' 
+              border: '1px solid #cbd5e1' 
             }}
           />
 
