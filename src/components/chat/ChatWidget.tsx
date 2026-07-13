@@ -186,7 +186,7 @@ export default function ChatWidget() {
               {/* Home Header */}
               <div className="flex items-center justify-between px-5 py-4">
                 <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center overflow-hidden p-0.5 border border-slate-100 shadow-sm">
-                  <img src="/logo.png" alt="Logo" className="w-full h-full object-contain scale-95" />
+                  <img src="https://aakar-ai-assistant.vercel.app/logo.png" alt="Logo" className="w-full h-full object-contain scale-95" />
                 </div>
                 <button
                   onClick={toggleChat}
@@ -213,7 +213,7 @@ export default function ChatWidget() {
                     <p className="text-xs font-semibold text-slate-800 mb-3">Recent message</p>
                     <div className="flex items-start gap-3">
                       <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center border border-slate-100 overflow-hidden p-0.5 flex-shrink-0">
-                        <img src="/logo.png" className="w-full h-full object-contain scale-95" />
+                        <img src="https://aakar-ai-assistant.vercel.app/logo.png" className="w-full h-full object-contain scale-95" />
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex justify-between items-center mb-0.5">
@@ -253,7 +253,7 @@ export default function ChatWidget() {
                 </button>
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center overflow-hidden p-0.5 border border-slate-100 shadow-sm">
-                <img src="/logo.png" alt="Logo" className="w-full h-full object-contain scale-95" />
+                <img src="https://aakar-ai-assistant.vercel.app/logo.png" alt="Logo" className="w-full h-full object-contain scale-95" />
               </div>
               <div className="flex flex-col">
                 <h3 className="text-[15px] font-semibold text-slate-800 leading-tight">
@@ -410,7 +410,7 @@ export default function ChatWidget() {
             </svg>
           ) : (
             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm overflow-hidden p-1.5">
-              <img src="/logo.png" alt="Chat" className="w-full h-full object-contain scale-95" />
+              <img src="https://aakar-ai-assistant.vercel.app/logo.png" alt="Chat" className="w-full h-full object-contain scale-95" />
             </div>
           )}
         </div>
