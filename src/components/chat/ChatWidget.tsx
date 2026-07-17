@@ -10,7 +10,7 @@
  * - Quick action routing (zero-cost hardcoded responses)
  */
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import QuickActionChips from "./QuickActionChips";
 import MessageBubble, { type Message } from "./MessageBubble";
 import ChatInput from "./ChatInput";
