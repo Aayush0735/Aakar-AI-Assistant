@@ -306,19 +306,22 @@ export default function ChatWidget({ config }: ChatWidgetProps = {}) {
                   className="text-3xl font-bold text-slate-800 leading-[1.2] mt-2 mb-8"
                   style={{ fontWeight: 700, marginBottom: '2rem' }}
                 >
-                  {config?.greeting ? (
-                    config.greeting.split('\n').map((line, i) => (
-                      <React.Fragment key={i}>
-                        {line}
-                        {i < config.greeting.split('\n').length - 1 && <br />}
-                      </React.Fragment>
-                    ))
-                  ) : (
-                    <>
-                      Hi there 👋<br />
-                      How can we help?
-                    </>
-                  )}
+                  {(() => {
+                    const greeting = config?.greeting;
+                    return greeting ? (
+                      greeting.split('\n').map((line, i) => (
+                        <React.Fragment key={i}>
+                          {line}
+                          {i < greeting.split('\n').length - 1 && <br />}
+                        </React.Fragment>
+                      ))
+                    ) : (
+                      <>
+                        Hi there 👋<br />
+                        How can we help?
+                      </>
+                    );
+                  })()}
                 </h1>
 
                 {sessions.length > 0 && (
