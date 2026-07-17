@@ -16,6 +16,7 @@ interface ChatInputProps {
   onSend: (message: string) => void;
   disabled?: boolean;
   remaining?: number;
+  primaryColor?: string;
 }
 
 const MAX_CHARS = 500;
@@ -24,6 +25,7 @@ export default function ChatInput({
   onSend,
   disabled = false,
   remaining,
+  primaryColor = "#00c288",
 }: ChatInputProps) {
   const [value, setValue] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -136,7 +138,7 @@ export default function ChatInput({
             disabled:shadow-none disabled:hover:scale-100
             transition-all duration-200"
           style={{ 
-            background: 'linear-gradient(135deg, #2563eb 0%, #10b981 100%)', 
+            background: primaryColor === "#00c288" ? 'linear-gradient(135deg, #2563eb 0%, #10b981 100%)' : primaryColor, 
             color: '#ffffff',
             opacity: disabled || !value.trim() ? 0.3 : 1 
           }}

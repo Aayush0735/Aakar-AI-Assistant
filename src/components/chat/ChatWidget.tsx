@@ -24,11 +24,23 @@ export interface ChatSession {
   updatedAt: Date;
 }
 
+export interface WidgetConfig {
+  scale?: string;
+  position?: "left" | "right";
+  fabIcon?: string;
+  fabSize?: string;
+  fabRadius?: string;
+  fabBg?: string;
+  fabBorder?: string;
+  fabShadow?: string;
+  headerName?: string;
+  headerLogo?: string;
+  primaryColor?: string;
+  greeting?: string;
+}
+
 export interface ChatWidgetProps {
-  config?: {
-    scale?: string;
-    primaryColor?: string;
-  };
+  config?: WidgetConfig;
 }
 
 export default function ChatWidget({ config }: ChatWidgetProps = {}) {
@@ -250,9 +262,10 @@ export default function ChatWidget({ config }: ChatWidgetProps = {}) {
         className="fixed z-50 pointer-events-none"
         style={{
           bottom: "6rem",
-          right: "2rem",
+          right: config?.position === "left" ? "auto" : "2rem",
+          left: config?.position === "left" ? "2rem" : "auto",
           transform: `scale(${config?.scale || '1'})`,
-          transformOrigin: "bottom right",
+          transformOrigin: config?.position === "left" ? "bottom left" : "bottom right",
         }}
       >
         <div
@@ -275,7 +288,7 @@ export default function ChatWidget({ config }: ChatWidgetProps = {}) {
               {/* Home Header */}
               <div className="flex items-center justify-between px-5 py-4">
                 <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center overflow-hidden p-0.5 border border-slate-100 shadow-sm">
-                  <img src="https://aakar-ai-assistant.vercel.app/logo.png" alt="Logo" className="w-full h-full object-contain scale-95" />
+                  <img src={config?.headerLogo || "https://aakar-ai-assistant.vercel.app/logo.png"} alt="Logo" className="w-full h-full object-contain scale-95" />
                 </div>
                 <button
                   onClick={toggleChat}
@@ -293,8 +306,19 @@ export default function ChatWidget({ config }: ChatWidgetProps = {}) {
                   className="text-3xl font-bold text-slate-800 leading-[1.2] mt-2 mb-8"
                   style={{ fontWeight: 700, marginBottom: '2rem' }}
                 >
-                  Hi there 👋<br />
-                  How can we help?
+                  {config?.greeting ? (
+                    config.greeting.split('\n').map((line, i) => (
+                      <React.Fragment key={i}>
+                        {line}
+                        {i < config.greeting.split('\n').length - 1 && <br />}
+                      </React.Fragment>
+                    ))
+                  ) : (
+                    <>
+                      Hi there 👋<br />
+                      How can we help?
+                    </>
+                  )}
                 </h1>
 
                 {sessions.length > 0 && (
@@ -334,8 +358,8 @@ export default function ChatWidget({ config }: ChatWidgetProps = {}) {
                   }}
                   className="bg-white border border-slate-200 rounded-xl p-4 flex items-center justify-between cursor-pointer shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <span className="text-[14px] font-semibold text-[#00c288]">Start new chat</span>
-                  <svg className="w-5 h-5 text-[#00c288]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <span className="text-[14px] font-semibold" style={{ color: config?.primaryColor || "#00c288" }}>Start new chat</span>
+                  <svg className="w-5 h-5" style={{ color: config?.primaryColor || "#00c288" }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </div>
@@ -357,7 +381,7 @@ export default function ChatWidget({ config }: ChatWidgetProps = {}) {
                   </button>
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center overflow-hidden p-0.5 border border-slate-100 shadow-sm">
-                      <img src="https://aakar-ai-assistant.vercel.app/logo.png" alt="Logo" className="w-full h-full object-contain scale-95" />
+                      <img src={config?.headerLogo || "https://aakar-ai-assistant.vercel.app/logo.png"} alt="Logo" className="w-full h-full object-contain scale-95" />
                     </div>
                     <div className="flex flex-col">
                       <h3 
@@ -366,8 +390,8 @@ export default function ChatWidget({ config }: ChatWidgetProps = {}) {
                       >
                         Aakar's Assistant
                       </h3>
-                      <p className="text-[11px] font-medium text-[#00c288] flex items-center gap-1.5 mt-0.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#00c288] animate-pulse" />
+                      <p className="text-[11px] font-medium flex items-center gap-1.5 mt-0.5" style={{ color: config?.primaryColor || "#00c288" }}>
+                        <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: config?.primaryColor || "#00c288" }} />
                         Online
                       </p>
                     </div>
@@ -480,6 +504,7 @@ export default function ChatWidget({ config }: ChatWidgetProps = {}) {
                 onSend={handleSendMessage}
                 disabled={isLoading || remaining === 0}
                 remaining={remaining}
+                primaryColor={config?.primaryColor}
               />
 
               {/* Powered by footer */}
@@ -497,7 +522,7 @@ export default function ChatWidget({ config }: ChatWidgetProps = {}) {
           <button 
             onClick={() => setActiveTab('home')}
             className="flex flex-col items-center gap-1 transition-colors"
-            style={{ color: activeTab === 'home' ? '#00c288' : '#94a3b8' }}
+            style={{ color: activeTab === 'home' ? (config?.primaryColor || '#00c288') : '#94a3b8' }}
           >
             <svg className="w-5 h-5" fill={activeTab === 'home' ? "currentColor" : "none"} stroke={activeTab === 'home' ? "none" : "currentColor"} viewBox="0 0 24 24" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -508,7 +533,7 @@ export default function ChatWidget({ config }: ChatWidgetProps = {}) {
           <button 
             onClick={() => setActiveTab('chat')}
             className="flex flex-col items-center gap-1 transition-colors"
-            style={{ color: activeTab === 'chat' ? '#00c288' : '#94a3b8' }}
+            style={{ color: activeTab === 'chat' ? (config?.primaryColor || '#00c288') : '#94a3b8' }}
           >
             <svg className="w-5 h-5" fill={activeTab === 'chat' ? "currentColor" : "none"} stroke={activeTab === 'chat' ? "none" : "currentColor"} viewBox="0 0 24 24" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />

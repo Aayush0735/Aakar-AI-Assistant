@@ -9,9 +9,30 @@ const WIDGET_CONTAINER_ID = "aakars-chat-widget-root";
 
 // Capture the script tag right when the file evaluates
 const scriptTag = document.currentScript || document.querySelector('script[src*="widget.js"]');
+
+const getAttr = (name: string, fallback: string) =>
+  scriptTag?.getAttribute(`data-${name}`) || fallback;
+
 const config = {
-  scale: scriptTag?.getAttribute("data-scale") || "1",
-  primaryColor: scriptTag?.getAttribute("data-color") || "#00c288",
+  // Layout & Size
+  scale: getAttr("scale", "1"),
+  position: getAttr("position", "right") as "left" | "right",
+
+  // FAB Button
+  fabIcon: getAttr("fab-icon", ""),               // Custom icon URL (empty = use default logo)
+  fabSize: getAttr("fab-size", "56"),              // FAB diameter in px
+  fabRadius: getAttr("fab-radius", "9999"),        // Border radius in px (9999 = circle)
+  fabBg: getAttr("fab-bg", ""),                    // Custom background (gradient/color)
+  fabBorder: getAttr("fab-border", ""),            // Border style e.g. "2px solid #fff"
+  fabShadow: getAttr("fab-shadow", ""),            // Custom shadow
+
+  // Header / Branding
+  headerName: getAttr("header-name", "Aakar's Assistant"),
+  headerLogo: getAttr("header-logo", ""),          // Custom logo URL
+  primaryColor: getAttr("color", "#00c288"),
+
+  // Greeting
+  greeting: getAttr("greeting", "Hi there 👋\nHow can we help?"),
 };
 
 function init() {
