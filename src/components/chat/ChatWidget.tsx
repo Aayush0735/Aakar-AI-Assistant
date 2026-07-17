@@ -259,11 +259,8 @@ export default function ChatWidget({ config }: ChatWidgetProps = {}) {
     <>
       {/* Chat Panel Wrapper for Scaling */}
       <div 
-        className="fixed z-50 pointer-events-none"
+        className={`fixed z-50 pointer-events-none chat-panel-scaler ${config?.position === "left" ? "chat-panel-scaler-left" : "chat-panel-scaler-right"}`}
         style={{
-          bottom: "6rem",
-          right: config?.position === "left" ? "auto" : "2rem",
-          left: config?.position === "left" ? "2rem" : "auto",
           transform: `scale(${config?.scale || '1'})`,
           transformOrigin: config?.position === "left" ? "bottom left" : "bottom right",
         }}

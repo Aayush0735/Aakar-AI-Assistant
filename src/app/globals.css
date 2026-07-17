@@ -240,12 +240,47 @@ body {
   animation: float 25s ease-in-out infinite reverse;
 }
 
+/* --- Scaler Classes for Shadow DOM & Host isolation --- */
+.chat-panel-scaler {
+  bottom: 6rem;
+}
+.chat-panel-scaler-right {
+  right: 2rem;
+  left: auto;
+}
+.chat-panel-scaler-left {
+  left: 2rem;
+  right: auto;
+}
+
+.fab-scaler {
+  bottom: 2rem;
+}
+.fab-scaler-right {
+  right: 2rem;
+  left: auto;
+}
+.fab-scaler-left {
+  left: 2rem;
+  right: auto;
+}
+
 /* --- Responsive Adjustments --- */
 @media (max-width: 440px) {
-  .chat-panel {
-    left: 8px;
-    right: 8px;
-    bottom: 80px;
+  .chat-panel-scaler {
+    left: 8px !important;
+    right: 8px !important;
+    bottom: 80px !important;
+    transform: none !important;
     width: auto !important;
+  }
+  .chat-panel {
+    width: 100% !important;
+    max-height: calc(100vh - 100px) !important;
+  }
+  .fab-scaler {
+    bottom: 16px !important;
+    right: 16px !important;
+    left: auto !important;
   }
 }
