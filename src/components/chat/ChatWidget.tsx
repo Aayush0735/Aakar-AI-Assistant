@@ -27,6 +27,9 @@ export interface ChatSession {
 export interface WidgetConfig {
   scale?: string;
   position?: "left" | "right";
+  bottom?: string;
+  right?: string;
+  left?: string;
   fabIcon?: string;
   fabSize?: string;
   fabRadius?: string;
@@ -261,6 +264,9 @@ export default function ChatWidget({ config }: ChatWidgetProps = {}) {
       <div 
         className={`fixed z-50 pointer-events-none chat-panel-scaler ${config?.position === "left" ? "chat-panel-scaler-left" : "chat-panel-scaler-right"}`}
         style={{
+          bottom: config?.bottom ? `calc(${config.bottom} + 4rem)` : undefined,
+          right: config?.position === "left" ? "auto" : (config?.right ? config.right : undefined),
+          left: config?.position === "left" ? (config?.left ? config.left : undefined) : "auto",
           transform: `scale(${config?.scale || '1'})`,
           transformOrigin: config?.position === "left" ? "bottom left" : "bottom right",
         }}

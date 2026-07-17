@@ -17,6 +17,9 @@ const config = {
   // Layout & Size
   scale: getAttr("scale", "1"),
   position: getAttr("position", "right") as "left" | "right",
+  bottom: getAttr("bottom", ""),
+  right: getAttr("right", ""),
+  left: getAttr("left", ""),
 
   // FAB Button
   fabIcon: getAttr("fab-icon", ""),               // Custom icon URL (empty = use default logo)
