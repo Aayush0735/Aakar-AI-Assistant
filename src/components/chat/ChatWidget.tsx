@@ -24,7 +24,14 @@ export interface ChatSession {
   updatedAt: Date;
 }
 
-export default function ChatWidget() {
+export interface ChatWidgetProps {
+  config?: {
+    scale?: string;
+    primaryColor?: string;
+  };
+}
+
+export default function ChatWidget({ config }: ChatWidgetProps = {}) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<'home' | 'chat'>('home');
   const [sessions, setSessions] = useState<ChatSession[]>([]);
@@ -238,22 +245,29 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Chat Panel */}
-      <div
-        className={`fixed z-50 w-[380px] max-h-[600px]
-          chat-panel rounded-2xl overflow-hidden
-          flex flex-col
-          transition-all duration-500 ease-out
-          ${isOpen
-            ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-            : "opacity-0 translate-y-4 scale-95 pointer-events-none"
-          }`}
+      {/* Chat Panel Wrapper for Scaling */}
+      <div 
+        className="fixed z-50 pointer-events-none"
         style={{
           bottom: "6rem",
           right: "2rem",
-          maxHeight: "min(600px, calc(100vh - 140px))",
+          transform: `scale(${config?.scale || '1'})`,
+          transformOrigin: "bottom right",
         }}
       >
+        <div
+          className={`w-[380px] max-h-[600px]
+            chat-panel rounded-2xl overflow-hidden
+            flex flex-col pointer-events-auto
+            transition-all duration-500 ease-out
+            ${isOpen
+              ? "opacity-100 translate-y-0 scale-100"
+              : "opacity-0 translate-y-4 scale-95 pointer-events-none"
+            }`}
+          style={{
+            maxHeight: "min(600px, calc(100vh - 140px))",
+          }}
+        >
         {/* Main Content Area */}
         <div className="flex-1 flex flex-col min-h-0 bg-white">
           {activeTab === 'home' ? (
@@ -502,26 +516,33 @@ export default function ChatWidget() {
             <span className="text-[10px] font-medium">Messages</span>
           </button>
         </div>
+        </div>
       </div>
 
-      {/* FAB (Floating Action Button) */}
-      <button
-        onClick={toggleChat}
-        className={`fixed z-50
-          w-14 h-14 rounded-full
-          bg-gradient-to-br from-blue-600 to-emerald-500
-          flex items-center justify-center
-          shadow-xl shadow-blue-500/30
-          hover:shadow-blue-500/40 hover:scale-110
-          active:scale-95
-          transition-all duration-300
-          fab-pulse`}
+      {/* FAB Scaler Wrapper */}
+      <div 
+        className="fixed z-50 pointer-events-none flex items-center justify-center"
         style={{
           bottom: "2rem",
-          right: "2rem"
+          right: "2rem",
+          width: "3.5rem",
+          height: "3.5rem",
+          transform: `scale(${config?.scale || '1'})`,
+          transformOrigin: "center center",
         }}
-        aria-label={isOpen ? "Close chat" : "Open chat"}
       >
+        <button
+          onClick={toggleChat}
+          className={`w-14 h-14 rounded-full pointer-events-auto absolute
+            bg-gradient-to-br from-blue-600 to-emerald-500
+            flex items-center justify-center
+            shadow-xl shadow-blue-500/30
+            hover:shadow-blue-500/40 hover:scale-110
+            active:scale-95
+            transition-all duration-300
+            fab-pulse`}
+          aria-label={isOpen ? "Close chat" : "Open chat"}
+        >
         <div
           className={`transition-transform duration-300 ${isOpen ? "rotate-0" : "rotate-0"}`}
         >
@@ -545,7 +566,8 @@ export default function ChatWidget() {
             </div>
           )}
         </div>
-      </button>
+        </button>
+      </div>
     </>
   );
 }

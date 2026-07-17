@@ -5,6 +5,13 @@ import "./app/globals.css";
 
 const WIDGET_CONTAINER_ID = "aakars-chat-widget-root";
 
+// Capture the script tag right when the file evaluates
+const scriptTag = document.currentScript || document.querySelector('script[src*="widget.js"]');
+const config = {
+  scale: scriptTag?.getAttribute("data-scale") || "1",
+  primaryColor: scriptTag?.getAttribute("data-color") || "#00c288",
+};
+
 function init() {
   let container = document.getElementById(WIDGET_CONTAINER_ID);
   
@@ -20,7 +27,7 @@ function init() {
   const root = createRoot(container);
   root.render(
     <React.StrictMode>
-      <ChatWidget />
+      <ChatWidget config={config} />
     </React.StrictMode>
   );
 }
